@@ -59,7 +59,7 @@
             this.btnCrearBarco.Name = "btnCrearBarco";
             this.btnCrearBarco.Size = new System.Drawing.Size(150, 38);
             this.btnCrearBarco.TabIndex = 2;
-            this.btnCrearBarco.Text = "AUTO";
+            this.btnCrearBarco.Text = "BARCO";
             this.btnCrearBarco.UseVisualStyleBackColor = true;
             this.btnCrearBarco.Click += new System.EventHandler(this.btnCrearBarco_Click);
             // 
@@ -74,6 +74,7 @@
             this.Controls.Add(this.btnCrearAvion);
             this.Controls.Add(this.btnCrearAuto);
             this.Name = "frmEtapa3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Etapa 3  : Crear Obetos Por Boton";
             this.Load += new System.EventHandler(this.frmEtapa3_Load);
             this.ResumeLayout(false);

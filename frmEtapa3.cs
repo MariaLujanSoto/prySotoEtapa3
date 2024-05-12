@@ -21,6 +21,9 @@ namespace prySotoEtapa3
         clsVehiculo objAvion;
         clsVehiculo objBarco;
 
+        bool Auto = false;
+        bool Avion = false;
+        bool Barco = false;
         private void frmEtapa3_Load(object sender, EventArgs e)
         {
             objAuto = new clsVehiculo();
@@ -37,6 +40,17 @@ namespace prySotoEtapa3
             objAuto.crearAuto();
             objAuto.Auto.Location = new Point(400, 500);
             this.Controls.Add(objAuto.Auto);
+            Auto = true;
+            if (Avion == true)
+            {
+                objAvion.Avion.Dispose();
+                Avion = false;
+            }
+            if (Barco == true)
+            {
+                objBarco.Barco.Dispose();
+                Barco = false;
+            }
         }
 
         private void btnCrearAvion_Click(object sender, EventArgs e)
@@ -44,6 +58,17 @@ namespace prySotoEtapa3
             objAvion.crearAvion();
             objAvion.Avion.Location = new Point(200, 100);
             Controls.Add(objAvion.Avion);
+            Avion = true;
+            if (Auto == true)
+            {
+                objAuto.Auto.Dispose();
+                Auto = false;
+            }
+            if (Barco == true)
+            {
+                objBarco.Barco.Dispose();
+                Barco = false;
+            }
         }
 
         private void btnCrearBarco_Click(object sender, EventArgs e)
@@ -51,6 +76,17 @@ namespace prySotoEtapa3
             objBarco.crearBarco();
             objBarco.Barco.Location = new Point(300, 350);
             this.Controls.Add(objBarco.Barco);
+            Barco = true;
+            if (Avion == true)
+            {
+                objAvion.Avion.Dispose();
+                Avion = false;
+            }
+            if (Auto == true)
+            {
+                objAuto.Auto.Dispose();
+                Auto = false;
+            }
         }
     }
 }
